@@ -78,3 +78,70 @@ try {
 } catch (error) {
     console.error(error.message);
 }
+
+
+
+
+console.log('running');
+
+// 1.Variables and Data Types
+const myName = 'Taiwo';
+console.log(myName);
+
+// A. The basics
+console.log("A. The basics:");
+// Loop to print numbers from 0 to 10
+console.log("Numbers from 0 to 10:");
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
+}
+
+// Loop to print numbers from 10 to 400
+console.log("Numbers from 10 to 400:");
+for (let i = 10; i <= 400; i++) {
+  console.log(i);
+}
+
+// Loop to print every third number from 12 to 4000
+console.log("Every third number starting with 12 and going no higher than 4000:");
+for (let i = 12; i <= 4000; i += 3) {
+  console.log(i);
+}
+
+// B. Get even
+console.log("\nB. Get even:");
+// Loop to print even numbers within the range of 1 - 100
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i + " is an even number");
+  }
+}
+
+// C. Give me Five
+console.log("\nC. Give me Five:");
+// Loop to print messages for numbers divisible by 5 and/or 3 within the range of 0 - 100
+for (let i = 0; i <= 100; i++) {
+  if (i % 5 === 0 && i % 3 === 0) {
+    console.log("I found a " + i + ". High five! Three is a crowd");
+  } else if (i % 5 === 0) {
+    console.log("I found a " + i + ". High five!");
+  } else if (i % 3 === 0) {
+    console.log("I found a " + i + ". Three is a crowd");
+  }
+}
+
+// D. Savings account
+console.log("\nD. Savings account:");
+// Loop to calculate the sum of numbers from 1 to 10
+let bank_account = 0;
+for (let i = 1; i <= 10; i++) {
+  bank_account += i;
+}
+console.log("Bank Account Balance (1-10): $" + bank_account);
+
+// Bonus: Loop to calculate the sum of numbers from 1 to 100 multiplied by 2
+let bonus_bank_account = 0;
+for (let i = 1; i <= 100; i++) {
+  bonus_bank_account += i * 2;
+}
+console.log("Bank Account Balance (1-100) with doubled pay: $" + bonus_bank_account);
