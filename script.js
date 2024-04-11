@@ -145,3 +145,96 @@ for (let i = 1; i <= 100; i++) {
   bonus_bank_account += i * 2;
 }
 console.log("Bank Account Balance (1-100) with doubled pay: $" + bonus_bank_account);
+
+
+
+// OBJECT ARRAY
+
+// A. Make a user object
+let user = {
+  name: "John Doe",
+  email: "john.doe@example.com",
+  age: 30,
+  purchased: []
+};
+
+// B. Update the user
+// Change email
+let newUser = {...user, email: "john.doe.new@example.com"};
+
+// Increment age
+newUser.age++;
+
+// C. Adding keys and values
+// Add location
+newUser.location = "New York";
+
+// D. Shopaholic!
+// Add purchases
+newUser.purchased.push("carbohydrates");
+newUser.purchased.push("peace of mind");
+newUser.purchased.push("Merino jodhpurs");
+
+// Log "Merino jodhpurs"
+console.log(newUser.purchased[2]);
+
+// E. Object-within-object
+// Add friend object
+newUser.friend = {
+  name: "Grace Hopper",
+  age: 85,
+  location: "California",
+  purchased: []
+};
+
+// Log friend's name
+console.log(newUser.friend.name);
+
+// Log friend's location
+console.log(newUser.friend.location);
+
+// Change friend's age
+newUser.friend.age = 55;
+
+// Add purchases for friend
+newUser.friend.purchased.push("The One Ring");
+newUser.friend.purchased.push("A latte");
+
+// Log "A latte" from friend's purchased array
+console.log(newUser.friend.purchased[1]);
+
+// F. Loops
+// Loop over user's purchased array
+console.log("User's purchases:");
+for (let item of newUser.purchased) {
+  console.log(item);
+}
+
+// Loop over friend's purchased array
+console.log("Friend's purchases:");
+for (let item of newUser.friend.purchased) {
+  console.log(item);
+}
+
+
+
+function calculateArea(width, height) {
+  let area = width * height;
+  return `The area of a rectangle with a width of ${width} and a height of ${height} is ${area} square units.`;
+}
+
+console.log(calculateArea(6, 7))
+
+const planetHasWater = function(planet) {
+  // Convert the planet argument to lowercase for case-insensitive comparison
+  const lowercasePlanet = planet.toLowerCase();
+  
+  // Check if the lowercase planet is "earth" or "mars"
+  return lowercasePlanet === "earth" || lowercasePlanet === "mars";
+};
+
+// Testing the function
+console.log(planetHasWater("Earth")); // Output: true
+console.log(planetHasWater("MARS")); // Output: true
+console.log(planetHasWater("venus")); // Output: false
+console.log(planetHasWater("Jupiter")); // Output: false
