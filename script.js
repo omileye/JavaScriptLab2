@@ -238,3 +238,77 @@ console.log(planetHasWater("Earth")); // Output: true
 console.log(planetHasWater("MARS")); // Output: true
 console.log(planetHasWater("venus")); // Output: false
 console.log(planetHasWater("Jupiter")); // Output: false
+
+
+// #Function Assignment
+// A. printGreeting
+function printGreeting(name) {
+  return `Hello there, ${name}!`;
+}
+
+console.log(printGreeting("Slimer"));
+// Output: Hello there, Slimer!
+
+// B. printCool
+function printCool(name) {
+  console.log(`${name} is cool`);
+}
+
+printCool("Captain Reynolds");
+// Output: Captain Reynolds is cool
+
+// C. calculateCube
+function calculateCube(num) {
+  return num * num * num;
+}
+
+console.log(calculateCube(5));
+// Output: 125
+
+// D. isVowel
+function isVowel(char) {
+  const vowels = "aeiouAEIOU";
+  return vowels.includes(char);
+}
+
+console.log(isVowel("a")); // true
+console.log(isVowel("b")); // false
+// Test with other vowels as well
+
+// E. getTwoLengths
+function getTwoLengths(str1, str2) {
+  return [str1.length, str2.length];
+}
+
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+// Output: [4, 13]
+
+// F. getMultipleLengths
+function getMultipleLengths(arr) {
+  return arr.map(str => str.length);
+}
+
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+// Output: [5, 4, 2, 2, 4]
+
+// G. maxOfThree
+function maxOfThree(num1, num2, num3) {
+  return Math.max(num1, num2, num3);
+}
+
+console.log(maxOfThree(6, 9, 1));
+// Output: 9
+
+// H. printLongestWord
+function printLongestWord(arr) {
+  let longestWord = "";
+  for (let word of arr) {
+      if (word.length > longestWord.length) {
+          longestWord = word;
+      }
+  }
+  return longestWord;
+}
+
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+// Output: "Peanutbutter"
